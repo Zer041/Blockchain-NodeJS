@@ -9,22 +9,22 @@ const ec = new EC('secp256k1');
 
 
 var main = function() {
-	const Blockchain = new Blockchain();
+	const BlockchainObj = new Blockchain();
 	const wallet = new Wallet();
 
 	wallet.generatePrivateKey();
 	const myKey = wallet.getECDSAKeyFromPrivate();
 	const myWalletAddress = wallet.generatePublicKey();
 
-	Blockchain.minePendingTransactions(myWalletAddress);
+	BlockchainObj.minePendingTransactions(myWalletAddress);
 
 	// bloque 1
   const tx1 = new Transaction(Date.now(), myWalletAddress, 'PublicAddressOne', 100, null);
 
  	tx1.signTransaction(myKey);
 
- 	Blockchain.addTransaction(tx1);
-	Blockchain.minePendingTransactions(myWalletAddress);
+ 	BlockchainObj.addTransaction(tx1);
+	BlockchainObj.minePendingTransactions(myWalletAddress);
 
 
 	// bloque 2
@@ -37,14 +37,14 @@ var main = function() {
 	tx4.signTransaction(myKey);
 	tx5.signTransaction(myKey);
 
-	Blockchain.addTransaction(tx3);
-	Blockchain.addTransaction(tx4);
-	Blockchain.addTransaction(tx5);
-	Blockchain.minePendingTransactions(myWalletAddress);
+	BlockchainObj.addTransaction(tx3);
+	BlockchainObj.addTransaction(tx4);
+	BlockchainObj.addTransaction(tx5);
+	BlockchainObj.minePendingTransactions(myWalletAddress);
 
-	console.log('Balance of my test wallet is: ', Blockchain.getAddressBalance(myWalletAddress));
-	//console.log(Blockchain.getBlocks());
-	//console.log("Blockchain finalizada con dificultad: " + Blockchain.difficulty);
+	console.log('Balance of my test wallet is: ', BlockchainObj.getAddressBalance(myWalletAddress));
+	//console.log(BlockchainObj.getBlocks());
+	//console.log("BlockchainObj finalizada con dificultad: " + BlockchainObj.difficulty);
 }
 
 
