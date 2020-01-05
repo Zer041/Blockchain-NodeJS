@@ -1,0 +1,19 @@
+{
+  "name": "main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Block.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoROMer/Blockchain-NodeJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoROMer/Blockchain-NodeJS/issues"
+  },
+  "homepage": "https://github.com/DiegoROMer/Blockchain-NodeJS#readme"
+}
