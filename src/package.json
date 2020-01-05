@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/DiegoROMer/Blockchain-NodeJS.git"
   },
-  "author": "",
+  "author": "Diego Romero Pérez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DiegoROMer/Blockchain-NodeJS/issues"
